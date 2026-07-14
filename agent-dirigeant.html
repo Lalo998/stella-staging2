@@ -233,6 +233,42 @@ footer { background:var(--nuit); border-top:1px solid var(--hairn); padding:36px
 .temps .bigphrase { color:var(--creme); max-width:20ch; margin-left:auto; margin-right:auto; }
 .temps .lede { color:var(--c72); margin:0 auto; }
 .temps .bigphrase em { color:var(--lueur); }
+
+/* ---------- OPTIMISATION MOBILE ---------- */
+@media (max-width:560px) {
+  .wrap { padding:0 18px; }
+  section { padding-top:78px; }
+  .liaison { padding-top:66px; }
+  .liaison + section { padding-top:34px; }
+  .hero, .heroE, .heroM, .heroL { padding-top:56px; padding-bottom:64px; }
+  h2 { font-size:clamp(26px,7.6vw,32px); }
+  .lede { font-size:16px; }
+  .ctarow { gap:10px; }
+  .ctarow .btn { width:100%; text-align:center; }
+  .assure { font-size:12px; }
+  .notch-i { padding:24px 20px; }
+  .livebox { padding:28px 22px; }
+  .hostcard { padding:24px 20px; gap:20px; }
+  .manif { padding:64px 0 70px; }
+  .manif .mvals { gap:0; }
+  .spanels { padding:22px 18px; min-height:0; }
+  .step { grid-template-columns:48px 1fr; gap:14px; }
+  .steps::before { left:23px; }
+  .step .n { width:46px; height:46px; font-size:18px; }
+  .chap { grid-template-columns:46px 1fr; gap:14px; }
+  .tlrail, .tlfill { left:22px; }
+  .chap .numring { width:44px; height:44px; font-size:17px; }
+  .chapcard { padding:22px 18px; }
+  .teambox { padding:22px 20px; }
+  .faces img { width:64px; height:64px; }
+  .tcard { width:300px; }
+  .gcard { width:250px; }
+  .cd { width:calc(50% - 6px); }
+  .final { padding:72px 18px 64px; }
+  .foot { flex-direction:column; align-items:flex-start; }
+}
+.mapscroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.mapscroll .mapwrap { min-width:640px; }
 </style>
 <div id="progress"></div>
 <header><nav class="nav">

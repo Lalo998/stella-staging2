@@ -237,6 +237,42 @@ footer { background:var(--nuit); border-top:1px solid var(--hairn); padding:36px
 @media(max-width:820px) { .doors { grid-template-columns:1fr; } }
 .solo-t { max-width:640px; margin:40px auto 0; }
 .solo-t .tcard { width:auto; }
+
+/* ---------- OPTIMISATION MOBILE ---------- */
+@media (max-width:560px) {
+  .wrap { padding:0 18px; }
+  section { padding-top:78px; }
+  .liaison { padding-top:66px; }
+  .liaison + section { padding-top:34px; }
+  .hero, .heroE, .heroM, .heroL { padding-top:56px; padding-bottom:64px; }
+  h2 { font-size:clamp(26px,7.6vw,32px); }
+  .lede { font-size:16px; }
+  .ctarow { gap:10px; }
+  .ctarow .btn { width:100%; text-align:center; }
+  .assure { font-size:12px; }
+  .notch-i { padding:24px 20px; }
+  .livebox { padding:28px 22px; }
+  .hostcard { padding:24px 20px; gap:20px; }
+  .manif { padding:64px 0 70px; }
+  .manif .mvals { gap:0; }
+  .spanels { padding:22px 18px; min-height:0; }
+  .step { grid-template-columns:48px 1fr; gap:14px; }
+  .steps::before { left:23px; }
+  .step .n { width:46px; height:46px; font-size:18px; }
+  .chap { grid-template-columns:46px 1fr; gap:14px; }
+  .tlrail, .tlfill { left:22px; }
+  .chap .numring { width:44px; height:44px; font-size:17px; }
+  .chapcard { padding:22px 18px; }
+  .teambox { padding:22px 20px; }
+  .faces img { width:64px; height:64px; }
+  .tcard { width:300px; }
+  .gcard { width:250px; }
+  .cd { width:calc(50% - 6px); }
+  .final { padding:72px 18px 64px; }
+  .foot { flex-direction:column; align-items:flex-start; }
+}
+.mapscroll { overflow-x:auto; -webkit-overflow-scrolling:touch; }
+.mapscroll .mapwrap { min-width:640px; }
 </style>
 <div id="progress"></div>
 <header><nav class="nav">
@@ -259,11 +295,11 @@ footer { background:var(--nuit); border-top:1px solid var(--hairn); padding:36px
   <div class="wrap">
     <p class="eyebrow">Votre entreprise, mappée</p>
     <h2>Chaque process s'allume, un à un.</h2>
-    <div class="mapwrap rv">
+    <div class="mapscroll"><div class="mapwrap rv">
       <svg viewBox="0 0 1000 530" class="mapsvg"><line class="mline" data-i="0" x1="500" y1="265" x2="500" y2="70"/><line class="mline" data-i="1" x1="500" y1="265" x2="772" y2="127"/><line class="mline" data-i="2" x1="500" y1="265" x2="885" y2="265"/><line class="mline" data-i="3" x1="500" y1="265" x2="772" y2="403"/><line class="mline" data-i="4" x1="500" y1="265" x2="500" y2="460"/><line class="mline" data-i="5" x1="500" y1="265" x2="228" y2="403"/><line class="mline" data-i="6" x1="500" y1="265" x2="115" y2="265"/><line class="mline" data-i="7" x1="500" y1="265" x2="228" y2="127"/><g class="mnode" data-i="0"><circle cx="500" cy="70" r="21"/><text x="500" y="44" text-anchor="middle">Devis</text></g><g class="mnode" data-i="1"><circle cx="772" cy="127" r="21"/><text x="772" y="101" text-anchor="middle">Facturation</text></g><g class="mnode" data-i="2"><circle cx="885" cy="265" r="21"/><text x="885" y="239" text-anchor="middle">Relances clients</text></g><g class="mnode" data-i="3"><circle cx="772" cy="403" r="21"/><text x="772" y="437" text-anchor="middle">Planning & RH</text></g><g class="mnode" data-i="4"><circle cx="500" cy="460" r="21"/><text x="500" y="494" text-anchor="middle">Pipeline commercial</text></g><g class="mnode" data-i="5"><circle cx="228" cy="403" r="21"/><text x="228" y="437" text-anchor="middle">Réunions</text></g><g class="mnode" data-i="6"><circle cx="115" cy="265" r="21"/><text x="115" y="239" text-anchor="middle">Stocks & inventaire</text></g><g class="mnode" data-i="7"><circle cx="228" cy="127" r="21"/><text x="228" y="101" text-anchor="middle">Comptabilité</text></g><circle cx="500" cy="265" r="40" class="mcenter"/></svg>
       <div class="mapicon"><svg viewBox="0 -15 496 710" style="height:30px" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="d11"><polygon points="-20,-20 270,-20 270,900 222,900 222,700 26,505 -20,505"/></clipPath><clipPath id="d12"><polygon points="-20,-20 270,-20 270,900 222,900 222,700 26,505 -20,505"/></clipPath></defs><g transform="translate(0,680) scale(1,-1)"><g transform="translate(0,0)" clip-path="url(#d11)"><path d="M218 0H30V670H218Z" fill="#E2A64B"/></g><g transform="translate(248,0)" clip-path="url(#d12)"><path d="M218 0H30V670H218Z" fill="#E2A64B"/></g></g></svg></div>
     </div>
-    <p class="phonecap" style="text-align:center;max-width:52ch;margin-left:auto;margin-right:auto"><b>Chaque point est un process de votre entreprise.</b> Stella les apprend un à un, et les tient, pendant que vous dirigez.</p>
+    </div><p class="phonecap" style="text-align:center;max-width:52ch;margin-left:auto;margin-right:auto"><b>Chaque point est un process de votre entreprise.</b> Stella les apprend un à un, et les tient, pendant que vous dirigez.</p>
   </div>
 </div>
 
